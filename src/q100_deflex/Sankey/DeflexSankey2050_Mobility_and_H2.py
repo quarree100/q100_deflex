@@ -7,7 +7,7 @@ import pandas as pd
 import deflex as dflx
 
 
-def create_deflex_sankey(path, file, show_plot):
+def create_deflex_sankey(path, file):
     deflx = os.path.join(path, file)
 
     all_results = dflx.fetch_deflex_result_tables(deflx)

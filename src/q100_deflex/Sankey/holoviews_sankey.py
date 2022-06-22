@@ -41,11 +41,11 @@ def main(filename, **kwargs):
     for sheet_name, df in df_dict.items():
 
         # Use same name as input file, plus sheet_name
-        filename = os.path.splitext(filename)[0] + " " + str(sheet_name)
+        plot_file = os.path.splitext(filename)[0] + " " + str(sheet_name)
 
         # Create the plot figure from DataFrame
         bkplot = create_and_save_sankey(
-            df, filename, sheet_name, sheet_name, **kwargs
+            df, plot_file, sheet_name, sheet_name, **kwargs
         )
         sankey_list += [bkplot]  # Add result to list of sankeys
 
